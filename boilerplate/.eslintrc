@@ -69,7 +69,7 @@
     "no-prototype-builtins": "off",
     "no-restricted-syntax": "warn",
     "no-tabs": "off",
-    "no-trailing-spaces": "warn",
+    "no-trailing-spaces": "off",
     "no-underscore-dangle": "off",
     "no-unused-vars": "warn",
     "no-use-before-define": "off",
@@ -109,6 +109,7 @@
     "react/require-default-props": "off",
     "react/self-closing-comp": "off",
     "react/style-prop-object": "off",
+    "react/no-unused-state": "off",
     "space-unary-ops": "off",
     "spaced-comment": "warn"
   }
