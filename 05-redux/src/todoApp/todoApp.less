@@ -1,0 +1,31 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list__item {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  line-height: 35px;
+  padding: 0.6em;
+  margin-bottom: 0.45em;
+
+  .todo-list__item-name {
+    flex-grow: 1;
+    cursor: pointer;
+    padding-left: 0.8em;
+  }
+
+  .todo-list__item-remove {
+    cursor: pointer;
+    color: #aa1121;
+  }
+
+  .todo-list__item-editing {
+    display: flex;
+  }
+}
