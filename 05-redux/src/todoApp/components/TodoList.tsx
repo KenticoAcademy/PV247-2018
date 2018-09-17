@@ -5,8 +5,8 @@ import { TodoItem } from './TodoItem';
 
 interface IProps {
   readonly todos: Immutable.List<ITodoItem>;
-  readonly onRemoveTodo: (index: number) => void;
-  readonly onEditTodo: (index: number, text: string) => void;
+  readonly onRemoveTodo: (id: Uuid) => void;
+  readonly onEditTodo: (id: Uuid, text: string) => void;
 }
 
 export class TodoList extends React.PureComponent<IProps> {
@@ -18,8 +18,8 @@ export class TodoList extends React.PureComponent<IProps> {
             key={index}
             todo={todo}
             index={index + 1}
-            onRemove={() => this.props.onRemoveTodo(index)}
-            onEdit={text => this.props.onEditTodo(index, text)}
+            onRemove={() => this.props.onRemoveTodo(todo.id)}
+            onEdit={text => this.props.onEditTodo(todo.id, text)}
           />
         ))
         }

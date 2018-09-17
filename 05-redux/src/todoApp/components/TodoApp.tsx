@@ -1,6 +1,7 @@
 import '../todoApp.less';
 import * as Immutable from 'immutable';
 import * as React from 'react';
+import * as uuid from 'uuid';
 import { ITodoItem } from '../models/ITodoItem';
 import { NewTodo } from './NewTodo';
 import { TodoList } from './TodoList';
@@ -20,16 +21,21 @@ export class TodoApp extends React.PureComponent<IProps, IState> {
     this.state = { todos: getInitialItems() };
   }
 
-  private editTodo = (index: number, text: string) => {
-    this.setState(prevState => ({ todos: prevState.todos.set(index, {text}) }));
+  private editTodo = (id: Uuid, text: string) => {
+    this.setState(prevState => {
+      const index = prevState.todos.findIndex((item: ITodoItem) => item.id === id);
+      const oldItem = prevState.todos.get(index);
+
+      return { todos: prevState.todos.set(index, {...oldItem, text}) };
+    });
   };
 
-  private removeTodo = (index: number) => {
-    this.setState(prevState => ({ todos: prevState.todos.remove(index) }));
+  private removeTodo = (id: Uuid) => {
+    this.setState(prevState => ({ todos: prevState.todos.filter((item: ITodoItem) => item.id !== id).toList() }));
   };
 
   private addTodo = (text: string) => {
-    this.setState(prevState => ({ todos: prevState.todos.push({text}) }));
+    this.setState(prevState => ({ todos: prevState.todos.push({id: uuid(), text}) }));
   };
 
   render() {
