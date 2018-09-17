@@ -120,13 +120,6 @@
       true,
       "allow-null-check"
     ],
-    "typedef": [
-      true,
-      "call-signature",
-      "parameter",
-      "property-declaration",
-      "array-destructuring"
-    ],
     "typedef-whitespace": [
       true,
       {
