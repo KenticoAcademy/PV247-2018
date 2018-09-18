@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { TodoApp } from './todoApp/components/TodoApp';
 import { Navigation } from './common/components/Navigation';
 import { rootReducer } from './common/rootReducer';
+import { TodoAppContainer } from './todoApp/containers/TodoApp';
 import { getInitialItems } from './todoApp/utils/getInitialItems';
 
 const initialState = {
@@ -13,18 +14,17 @@ const initialState = {
 
 const store = createStore(rootReducer, initialState);
 
-console.log(store.getState());
-console.log(store.getState().todoApp.items.toJS());
-
 export class App extends React.PureComponent {
   render() {
     return (
-      <>
-        <Navigation/>
-        <main>
-          <TodoApp/>
-        </main>
-      </>
+      <Provider store={store}>
+        <>
+          <Navigation/>
+          <main>
+            <TodoAppContainer/>
+          </main>
+        </>
+      </Provider>
     );
   }
 }
