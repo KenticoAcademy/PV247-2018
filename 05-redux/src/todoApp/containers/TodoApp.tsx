@@ -1,7 +1,6 @@
 import { IState } from '../../common/IState';
 import { Dispatch } from 'redux';
 import { createItem } from '../actions/actionCreators';
-import { ITodoItem } from '../models/ITodoItem';
 import { connect } from 'react-redux';
 import {
   ITodoAppDispatchProps,
@@ -11,7 +10,7 @@ import {
 
 const mapStateToProps = (state: IState): ITodoAppStateProps => {
   return {
-    todoIds: state.todoApp.items.map((i: ITodoItem) => i.id).toList(),
+    todoIds: state.todoApp.items.allIds,
   };
 };
 

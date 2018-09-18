@@ -3,11 +3,10 @@ import { Dispatch } from 'redux';
 import { IState } from '../../common/IState';
 import { cancelEditingItem, deleteItem, startEditingItem, updateItem } from '../actions/actionCreators';
 import { ITodoItemDispatchProps, ITodoItemOwnProps, ITodoItemStateProps, TodoItem } from '../components/TodoItem';
-import { ITodoItem } from '../models/ITodoItem';
 
 const mapStateToProps = (state: IState, ownProps: ITodoItemOwnProps) => {
   return {
-    todo: state.todoApp.items.find((i: ITodoItem) => i.id === ownProps.id),
+    todo: state.todoApp.items.byId.get(ownProps.id),
     isBeingEdited: state.todoApp.editedItemId === ownProps.id,
   };
 };

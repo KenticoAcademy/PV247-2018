@@ -4,7 +4,7 @@ import { IState } from '../IState';
 
 const mapStateToProps = (state: IState): IBadgeStateProps => {
   return {
-    children: state.todoApp.items.count(),
+    children: state.todoApp.items.byId.count(),
   };
 };
 
