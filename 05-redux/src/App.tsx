@@ -1,7 +1,8 @@
 import './common/common.less';
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
+import logger from 'redux-logger';
 import { Navigation } from './common/components/Navigation';
 import { rootReducer } from './common/rootReducer';
 import { TodoAppContainer } from './todoApp/containers/TodoApp';
@@ -13,7 +14,9 @@ const initialState = {
   }
 };
 
-const store = createStore(rootReducer, initialState);
+const middleware = logger;
+
+const store = createStore(rootReducer, initialState, applyMiddleware(middleware));
 
 export class App extends React.PureComponent {
   render() {
