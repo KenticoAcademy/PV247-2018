@@ -3,12 +3,21 @@ import { ITodoItem } from '../models/ITodoItem';
 import { ItemEdit } from './TodoItemEdit';
 import { ItemDisplay } from './TodoItemDisplay';
 
-interface IProps {
+export interface ITodoItemOwnProps {
+  readonly id: Uuid;
   readonly index: number;
+}
+
+export interface ITodoItemStateProps {
   readonly todo: ITodoItem;
+}
+
+export interface ITodoItemDispatchProps {
   readonly onRemove: () => void;
   readonly onEdit: (text: string) => void;
 }
+
+type IProps = ITodoItemOwnProps & ITodoItemStateProps & ITodoItemDispatchProps;
 
 interface IState {
   readonly isExpanded: boolean;
