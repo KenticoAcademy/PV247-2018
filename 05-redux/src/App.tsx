@@ -1,8 +1,7 @@
 import './common/common.less';
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import { applyMiddleware, createStore } from 'redux';
-import logger from 'redux-logger';
+import { applyMiddleware, createStore, compose } from 'redux';
 import { Navigation } from './common/components/Navigation';
 import { rootReducer } from './common/rootReducer';
 import { TodoAppContainer } from './todoApp/containers/TodoApp';
@@ -14,9 +13,12 @@ const initialState = {
   }
 };
 
-const middleware = logger;
+const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const middleware = [];
 
-const store = createStore(rootReducer, initialState, applyMiddleware(middleware));
+const store = createStore(rootReducer, initialState, composeEnhancers(
+  applyMiddleware(...middleware)
+));
 
 export class App extends React.PureComponent {
   render() {
