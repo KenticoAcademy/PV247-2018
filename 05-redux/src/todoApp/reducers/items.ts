@@ -1,6 +1,10 @@
 import * as Immutable from 'immutable';
 import { ITodoItem } from '../models/ITodoItem';
-import { TODO_APP_ITEM_CREATE, TODO_APP_ITEM_UPDATE } from '../constants/actionTypes';
+import {
+  TODO_APP_ITEM_CREATE,
+  TODO_APP_ITEM_DELETE,
+  TODO_APP_ITEM_UPDATE
+} from '../constants/actionTypes';
 
 export const items = (prevState = Immutable.List<ITodoItem>(), action: Action): Immutable.List<ITodoItem> => {
   switch (action.type) {
@@ -17,6 +21,9 @@ export const items = (prevState = Immutable.List<ITodoItem>(), action: Action): 
 
       return prevState.set(index, { ...oldTodo, text });
     }
+
+    case TODO_APP_ITEM_DELETE:
+      return prevState.filter((item: ITodoItem) => item.id !== action.payload.id).toList();
 
     default:
       return prevState;

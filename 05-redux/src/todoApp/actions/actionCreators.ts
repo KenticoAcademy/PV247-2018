@@ -1,5 +1,9 @@
 import * as uuid from 'uuid';
-import { TODO_APP_ITEM_CREATE, TODO_APP_ITEM_UPDATE } from '../constants/actionTypes';
+import {
+  TODO_APP_ITEM_CREATE,
+  TODO_APP_ITEM_UPDATE,
+  TODO_APP_ITEM_DELETE,
+} from '../constants/actionTypes';
 
 export const createItem = (text: string): Action => ({
   type: TODO_APP_ITEM_CREATE,
@@ -14,5 +18,12 @@ export const updateItem = (id: Uuid, text: string): Action => ({
   payload: {
     id,
     text
+  }
+});
+
+export const deleteItem = (id: Uuid): Action => ({
+  type: TODO_APP_ITEM_DELETE,
+  payload: {
+    id,
   }
 });

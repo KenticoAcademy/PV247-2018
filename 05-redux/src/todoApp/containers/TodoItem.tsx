@@ -1,9 +1,9 @@
-import { IState } from '../../common/IState';
-import { Dispatch } from 'redux';
-import { updateItem } from '../actions/actionCreators';
-import { ITodoItem } from '../models/ITodoItem';
 import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
+import { IState } from '../../common/IState';
+import { deleteItem, updateItem } from '../actions/actionCreators';
 import { ITodoItemDispatchProps, ITodoItemOwnProps, ITodoItemStateProps, TodoItem } from '../components/TodoItem';
+import { ITodoItem } from '../models/ITodoItem';
 
 const mapStateToProps = (state: IState, ownProps: ITodoItemOwnProps) => {
   return {
@@ -14,7 +14,7 @@ const mapStateToProps = (state: IState, ownProps: ITodoItemOwnProps) => {
 const mapDispatchToProps = (dispatch: Dispatch, ownProps: ITodoItemOwnProps) => {
   return {
     onEdit: (text: string) => dispatch(updateItem(ownProps.id, text)),
-    onRemove: () => { console.log('Remove not implemented yet', ownProps.id); },
+    onRemove: () => dispatch(deleteItem(ownProps.id)),
   };
 };
 
