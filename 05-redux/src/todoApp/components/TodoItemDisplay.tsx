@@ -3,7 +3,7 @@ import { ITodoItem } from '../models/ITodoItem';
 
 interface IProps {
   readonly todo: ITodoItem;
-  readonly onClick: () => void;
+  readonly onClick?: () => void;
   readonly onRemove: () => void;
 }
 
