@@ -15,12 +15,16 @@ import { chatServerUrl } from '../config';
  */
 
 // @TODO: Import the MessageForm component here.
-import { MessageForm } from './Where is it?';
+import { MessageForm } from './MessageForm';
 
 export class Chat extends React.Component {
   constructor(props) {
     super(props); // Must be called to properly build the base object and initialize its prototype.
 
+    this.state = {
+      nick: '',
+      message: '',
+    };
     /*
      * @TODO:
      * Add and initialize your state
@@ -67,35 +71,32 @@ export class Chat extends React.Component {
 
   // </editor-fold>
 
+  updateMessage = (message) => {
+    this.setState({ message });
+  };
+
+  updateNick = (nick) => {
+    this.setState({ nick });
+  };
+
   sendMessage = () => {
     // @TODO: Take nickname and message text from the state (wherever you store it) and pass it to the postMessage function
-    this.postMessage(/* nickname, messageText */);
+    this.postMessage(this.state.nick, this.state.message);
 
     // @TODO: clear the message field after sending the message
+    this.updateMessage('');
   };
 
   render() {
-    /*
-     * @TODO: Render your list of messages and message form here
-     * this.state has the shape of
-     * {
-     *   messages: Array<{
-     *     id: string,
-     *     from: string,
-     *     text: string,
-     *   }>,
-     *   ... Whatever you add to it.
-     */
-
     return (
       <div className="chat">
         <MessageList messages={this.state.messages} />
         <MessageForm
           onSend={this.sendMessage}
-          nick={this.state /* @TODO: where's the nick stored? */}
-          onNickChange={/* @TODO: How do you update the nickname? */}
-          message={/* @TODO: where's the message text stored? */}
-          onMessageChange={/* @TODO: How do you update the message? */}
+          nick={this.state.nick /* @TODO: where's the nick stored? */}
+          onNickChange={this.updateNick/* @TODO: How do you update the nickname? */}
+          message={this.state.message/* @TODO: where's the message text stored? */}
+          onMessageChange={this.updateMessage/* @TODO: How do you update the message? */}
         />
       </div>
     );
