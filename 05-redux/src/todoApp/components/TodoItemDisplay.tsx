@@ -4,14 +4,17 @@ import { ITodoItem } from '../models/ITodoItem';
 interface IProps {
   readonly todo: ITodoItem;
   readonly onClick?: () => void;
-  readonly onRemove: () => void;
+  readonly onToggle: () => void;
 }
 
-export const ItemDisplay: React.SFC<IProps> = ({ todo, onClick, onRemove }) => (
+export const ItemDisplay: React.SFC<IProps> = ({ todo, onClick, onToggle }) => (
   <>
     <div className="todo-list__item-name" onClick={onClick}>{todo.text}</div>
-    <div className="todo-list__item-remove">
-      <i className="glyphicon glyphicon-remove" onClick={onRemove} style={{  }}/>
+    <div className="todo-list__item-toggle" onClick={onToggle}>
+      {todo.isCompleted
+        ? <i className="glyphicon glyphicon-check"/>
+        : <i className="glyphicon glyphicon-unchecked"/>
+      }
     </div>
   </>
 );

@@ -1,6 +1,6 @@
 import * as Immutable from 'immutable';
 import { combineReducers } from 'redux';
-import { TODO_APP_ITEM_CREATE, TODO_APP_ITEM_DELETE, TODO_APP_ITEM_UPDATE } from '../constants/actionTypes';
+import { TODO_APP_ITEM_CREATE, TODO_APP_ITEM_TOGGLE, TODO_APP_ITEM_UPDATE } from '../constants/actionTypes';
 import { IItems } from '../models/ITodoApp';
 import { ITodoItem } from '../models/ITodoItem';
 
@@ -9,7 +9,7 @@ const byId = (prevState = Immutable.Map<Uuid, ITodoItem>(), action: Action): Imm
     case TODO_APP_ITEM_CREATE: {
       const { id, text } = action.payload;
 
-      return prevState.set(id, { id, text });
+      return prevState.set(id, { id, text, isCompleted: false });
     }
 
     case TODO_APP_ITEM_UPDATE: {
@@ -19,8 +19,12 @@ const byId = (prevState = Immutable.Map<Uuid, ITodoItem>(), action: Action): Imm
       return prevState.set(id, { ...oldTodo, text });
     }
 
-    case TODO_APP_ITEM_DELETE:
-      return prevState.remove(action.payload.id);
+    case TODO_APP_ITEM_TOGGLE: {
+      const { id } = action.payload;
+      const oldTodo = prevState.get(id);
+
+      return prevState.set(id, { ...oldTodo, isCompleted: !oldTodo.isCompleted });
+    }
 
     default:
       return prevState;
@@ -31,9 +35,6 @@ const allIds = (prevState = Immutable.List<Uuid>(), action: Action): Immutable.L
   switch (action.type) {
     case TODO_APP_ITEM_CREATE:
       return prevState.push(action.payload.id);
-
-    case TODO_APP_ITEM_DELETE:
-      return prevState.filter((id: Uuid) => id !== action.payload.id).toList();
 
     default:
       return prevState;

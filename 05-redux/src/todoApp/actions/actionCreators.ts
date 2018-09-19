@@ -2,7 +2,9 @@ import * as uuid from 'uuid';
 import {
   TODO_APP_ITEM_CREATE,
   TODO_APP_ITEM_UPDATE,
-  TODO_APP_ITEM_DELETE, TODO_APP_ITEM_EDITING_STARTED, TODO_APP_ITEM_EDITING_CANCELLED,
+  TODO_APP_ITEM_TOGGLE,
+  TODO_APP_ITEM_EDITING_STARTED,
+  TODO_APP_ITEM_EDITING_CANCELLED,
 } from '../constants/actionTypes';
 
 export const createItem = (text: string): Action => ({
@@ -21,8 +23,8 @@ export const updateItem = (id: Uuid, text: string): Action => ({
   }
 });
 
-export const deleteItem = (id: Uuid): Action => ({
-  type: TODO_APP_ITEM_DELETE,
+export const toggleItem = (id: Uuid): Action => ({
+  type: TODO_APP_ITEM_TOGGLE,
   payload: {
     id,
   }

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { IState } from '../../common/IState';
-import { cancelEditingItem, deleteItem, startEditingItem, updateItem } from '../actions/actionCreators';
+import { cancelEditingItem, startEditingItem, toggleItem, updateItem } from '../actions/actionCreators';
 import { ITodoItemDispatchProps, ITodoItemOwnProps, ITodoItemStateProps, TodoItem } from '../components/TodoItem';
 
 const mapStateToProps = (state: IState, ownProps: ITodoItemOwnProps) => {
@@ -14,7 +14,7 @@ const mapStateToProps = (state: IState, ownProps: ITodoItemOwnProps) => {
 const mapDispatchToProps = (dispatch: Dispatch, ownProps: ITodoItemOwnProps) => {
   return {
     onEdit: (text: string) => dispatch(updateItem(ownProps.id, text)),
-    onRemove: () => dispatch(deleteItem(ownProps.id)),
+    onToggle: () => dispatch(toggleItem(ownProps.id)),
     onStartEditing: () => dispatch(startEditingItem(ownProps.id)),
     onCancelEditing: () => dispatch(cancelEditingItem(ownProps.id)),
   };

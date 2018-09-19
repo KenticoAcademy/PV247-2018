@@ -20,12 +20,27 @@
     padding-left: 0.8em;
   }
 
-  .todo-list__item-remove {
+  .todo-list__item-toggle {
     cursor: pointer;
-    color: #aa1121;
+
+    .glyphicon-check {
+      color: #00aa35;
+    }
+
+    .glyphicon-unchecked {
+      color: #aa1121;
+    }
   }
 
   .todo-list__item-editing {
     display: flex;
+  }
+}
+
+.todo-list__item--is-completed {
+  .todo-list__item-name {
+    cursor: auto;
+    color: #aaaaaa;
+    text-decoration: line-through;
   }
 }
