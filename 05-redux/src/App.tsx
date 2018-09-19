@@ -1,8 +1,9 @@
 import * as Immutable from 'immutable';
 import * as React from 'react';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import { applyMiddleware, compose, createStore } from 'redux';
 import './common/common.less';
-import { applyMiddleware, createStore, compose } from 'redux';
 import { Navigation } from './common/components/Navigation';
 import { rootReducer } from './common/rootReducer';
 import { TodoApp } from './todoApp/components/TodoApp';
@@ -20,7 +21,7 @@ const initialState = {
 };
 
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const middleware = [];
+const middleware = [thunk];
 
 const store = createStore(rootReducer, initialState, composeEnhancers(
   applyMiddleware(...middleware)
