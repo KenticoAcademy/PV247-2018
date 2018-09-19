@@ -1,28 +1,30 @@
 import * as Immutable from 'immutable';
+import * as memoize from 'memoizee';
 import { connect } from 'react-redux';
 import { IState } from '../../common/IState';
 import { ITodoListStateProps, TodoList } from '../components/TodoList';
 import { TodoFilter } from '../constants/TodoFilter';
+import { ITodoItem } from '../models/ITodoItem';
 
-const getVisibleTodoIds = (state: IState): Immutable.List<Uuid> => {
-  switch (state.todoApp.visibilityFilter) {
+const getVisibleTodoIds = memoize((visibilityFilter: TodoFilter, allIds: Immutable.List<Uuid>, byId: Immutable.Map<Uuid, ITodoItem>): Immutable.List<Uuid> => {
+  switch (visibilityFilter) {
     case TodoFilter.All:
-      return state.todoApp.items.allIds;
+      return allIds;
 
     case TodoFilter.Done:
-      return state.todoApp.items.allIds.filter((id: Uuid) => state.todoApp.items.byId.get(id).isCompleted).toList();
+      return allIds.filter((id: Uuid) => byId.get(id).isCompleted).toList();
 
     case TodoFilter.Todo:
-      return state.todoApp.items.allIds.filter((id: Uuid) => !state.todoApp.items.byId.get(id).isCompleted).toList();
+      return allIds.filter((id: Uuid) => !byId.get(id).isCompleted).toList();
 
     default:
-      throw new Error(`Unknown value of visibility filter '${state.todoApp.visibilityFilter}'`);
+      throw new Error(`Unknown value of visibility filter '${visibilityFilter}'`);
   }
-};
+});
 
 const mapStateToProps = (state: IState): ITodoListStateProps => {
   return {
-    todoIds: getVisibleTodoIds(state),
+    todoIds: getVisibleTodoIds(state.todoApp.visibilityFilter, state.todoApp.items.allIds, state.todoApp.items.byId),
   };
 };
 
