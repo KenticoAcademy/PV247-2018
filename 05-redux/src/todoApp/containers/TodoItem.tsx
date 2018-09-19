@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { IState } from '../../common/IState';
-import { cancelEditingItem, startEditingItem, toggleItem, updateItem } from '../actions/actionCreators';
+import { cancelEditingItem, startEditingItem, toggleItem } from '../actions/actionCreators';
+import { updateItem } from '../actions/updateItem';
 import { ITodoItemDispatchProps, ITodoItemOwnProps, ITodoItemStateProps, TodoItem } from '../components/TodoItem';
 
 const mapStateToProps = (state: IState, ownProps: ITodoItemOwnProps) => {

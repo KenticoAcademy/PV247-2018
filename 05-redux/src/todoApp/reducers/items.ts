@@ -1,6 +1,6 @@
 import * as Immutable from 'immutable';
 import { combineReducers } from 'redux';
-import { TODO_APP_ITEM_CREATE, TODO_APP_ITEM_TOGGLE, TODO_APP_ITEM_UPDATE, TODO_APP_LOADING_SUCCESS } from '../constants/actionTypes';
+import { TODO_APP_ITEM_CREATE, TODO_APP_ITEM_TOGGLE, TODO_APP_ITEM_UPDATE_SUCCESS, TODO_APP_LOADING_SUCCESS } from '../constants/actionTypes';
 import { IItems } from '../models/ITodoApp';
 import { ITodoItem } from '../models/ITodoItem';
 
@@ -15,11 +15,10 @@ const byId = (prevState = Immutable.Map<Uuid, ITodoItem>(), action: Action): Imm
       return prevState.set(id, { id, text, isCompleted: false });
     }
 
-    case TODO_APP_ITEM_UPDATE: {
-      const { id, text } = action.payload;
-      const oldTodo = prevState.get(id);
+    case TODO_APP_ITEM_UPDATE_SUCCESS: {
+      const { todo } = action.payload;
 
-      return prevState.set(id, { ...oldTodo, text });
+      return prevState.set(todo.id, { ...todo });
     }
 
     case TODO_APP_ITEM_TOGGLE: {

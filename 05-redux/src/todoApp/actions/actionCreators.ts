@@ -1,7 +1,6 @@
 import * as uuid from 'uuid';
 import {
   TODO_APP_ITEM_CREATE,
-  TODO_APP_ITEM_UPDATE,
   TODO_APP_ITEM_TOGGLE,
   TODO_APP_ITEM_EDITING_STARTED,
   TODO_APP_ITEM_EDITING_CANCELLED,
@@ -14,14 +13,6 @@ export const createItem = (text: string): Action => ({
   payload: {
     text,
     id: uuid(),
-  }
-});
-
-export const updateItem = (id: Uuid, text: string): Action => ({
-  type: TODO_APP_ITEM_UPDATE,
-  payload: {
-    id,
-    text
   }
 });
 
