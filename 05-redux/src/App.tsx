@@ -1,29 +1,16 @@
-import * as Immutable from 'immutable';
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
 import { applyMiddleware, compose, createStore } from 'redux';
+import thunk from 'redux-thunk';
 import './common/common.less';
 import { Navigation } from './common/components/Navigation';
 import { rootReducer } from './common/rootReducer';
-import { TodoApp } from './todoApp/components/TodoApp';
-import { ITodoItem } from './todoApp/models/ITodoItem';
-import { getInitialItems } from './todoApp/utils/getInitialItems';
-
-const initialItems = getInitialItems();
-const initialState = {
-  todoApp: {
-    items: {
-      allIds: initialItems.map((item: ITodoItem) => item.id),
-      byId: Immutable.Map(initialItems.map((item: ITodoItem) => [item.id, item])),
-    },
-  }
-};
+import { TodoAppContainer } from './todoApp/containers/TodoApp';
 
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const middleware = [thunk];
 
-const store = createStore(rootReducer, initialState, composeEnhancers(
+const store = createStore(rootReducer, composeEnhancers(
   applyMiddleware(...middleware)
 ));
 
@@ -34,7 +21,7 @@ export class App extends React.PureComponent {
         <>
           <Navigation/>
           <main>
-            <TodoApp/>
+            <TodoAppContainer/>
           </main>
         </>
       </Provider>

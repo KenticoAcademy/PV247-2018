@@ -4,7 +4,15 @@ import { TodoListContainer } from '../containers/TodoList';
 import '../todoApp.less';
 import { VisibilityFilters } from './VisibilityFilters';
 
-export class TodoApp extends React.PureComponent {
+export interface ITodoAppDispatchProps {
+  readonly loadItems: () => void;
+}
+
+export class TodoApp extends React.PureComponent<ITodoAppDispatchProps> {
+  componentDidMount() {
+    this.props.loadItems();
+  }
+
   render() {
     return (
       <div className="container">
