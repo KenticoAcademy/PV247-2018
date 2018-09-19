@@ -1,11 +1,11 @@
-import './common/common.less';
-import * as React from 'react';
 import * as Immutable from 'immutable';
+import * as React from 'react';
 import { Provider } from 'react-redux';
+import './common/common.less';
 import { applyMiddleware, createStore, compose } from 'redux';
 import { Navigation } from './common/components/Navigation';
 import { rootReducer } from './common/rootReducer';
-import { TodoAppContainer } from './todoApp/containers/TodoApp';
+import { TodoApp } from './todoApp/components/TodoApp';
 import { ITodoItem } from './todoApp/models/ITodoItem';
 import { getInitialItems } from './todoApp/utils/getInitialItems';
 
@@ -33,7 +33,7 @@ export class App extends React.PureComponent {
         <>
           <Navigation/>
           <main>
-            <TodoAppContainer/>
+            <TodoApp/>
           </main>
         </>
       </Provider>

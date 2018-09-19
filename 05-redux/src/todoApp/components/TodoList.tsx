@@ -2,11 +2,11 @@ import * as Immutable from 'immutable';
 import * as React from 'react';
 import { TodoItemContainer } from '../containers/TodoItem';
 
-interface IProps {
+export interface ITodoListStateProps {
   readonly todoIds: Immutable.List<Uuid>;
 }
 
-export class TodoList extends React.PureComponent<IProps> {
+export class TodoList extends React.PureComponent<ITodoListStateProps> {
   render() {
     return (
       <div className="todo-list">

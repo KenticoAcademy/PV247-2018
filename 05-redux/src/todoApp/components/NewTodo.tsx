@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface IProps {
+export interface INewTodoDispatchProps {
   readonly onTodoAdd: (text: string) => void;
 }
 
@@ -8,8 +8,8 @@ interface IState {
   readonly value: string;
 }
 
-export class NewTodo extends React.PureComponent<IProps, IState> {
-  constructor(props: IProps) {
+export class NewTodo extends React.PureComponent<INewTodoDispatchProps, IState> {
+  constructor(props: INewTodoDispatchProps) {
     super(props);
 
     this.state = {

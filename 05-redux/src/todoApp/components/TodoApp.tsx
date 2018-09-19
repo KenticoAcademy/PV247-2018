@@ -1,18 +1,9 @@
-import '../todoApp.less';
-import * as Immutable from 'immutable';
 import * as React from 'react';
-import { NewTodo } from './NewTodo';
-import { TodoList } from './TodoList';
+import { NewTodoContainer } from '../containers/NewTodo';
+import { TodoListContainer } from '../containers/TodoList';
+import '../todoApp.less';
 
-export interface ITodoAppStateProps {
-  readonly todoIds: Immutable.List<Uuid>;
-}
-
-export interface ITodoAppDispatchProps {
-  readonly onAddTodo: (text: string) => void;
-}
-
-export class TodoApp extends React.PureComponent<ITodoAppStateProps & ITodoAppDispatchProps> {
+export class TodoApp extends React.PureComponent {
   render() {
     return (
       <div className="container">
@@ -21,8 +12,8 @@ export class TodoApp extends React.PureComponent<ITodoAppStateProps & ITodoAppDi
             <h1>Todo app</h1>
           </div>
           <div className="col-sm-12 col-md-6">
-            <TodoList todoIds={this.props.todoIds}/>
-            <NewTodo onTodoAdd={this.props.onAddTodo}/>
+            <TodoListContainer/>
+            <NewTodoContainer/>
           </div>
         </div>
       </div>
