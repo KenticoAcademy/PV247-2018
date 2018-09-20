@@ -24,3 +24,13 @@ export const updateItem = (id: Uuid, text: string): any =>
 
     dispatch(updateTodoSuccess(todo));
   };
+
+export const toggleItem = (id: Uuid): any =>
+  async (dispatch: Dispatch, getState: () => IState): Promise<void> => {
+    dispatch(updateTodoStarted());
+
+    const oldTodo = getState().todoApp.items.byId.get(id);
+    const todo = await updateTodoApi({ ...oldTodo, isCompleted: !oldTodo.isCompleted });
+
+    dispatch(updateTodoSuccess(todo));
+  };
