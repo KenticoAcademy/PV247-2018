@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/jest": "^23.1.5",
     "@types/react": "^16.4.6",
+    "@types/uuid": "^3.4.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",

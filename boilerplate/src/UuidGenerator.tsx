@@ -1,8 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 import { getUuid } from './utils/getUuid';
+import { Uuid } from './utils/Uuid';
 
-export class UuidGenerator extends React.Component {
-  constructor(props) {
+interface IUuidGeneratorState {
+  readonly uuids: Uuid[];
+}
+
+export class UuidGenerator extends React.Component<null, IUuidGeneratorState> {
+  constructor(props: any) {
     super(props);
 
     this.state = {
@@ -10,7 +15,7 @@ export class UuidGenerator extends React.Component {
     };
   }
 
-  onClick = (event) => {
+  onClick = (event: React.MouseEvent) => {
     this.setState(prevState => ({
       uuids: [...prevState.uuids, getUuid()]
     }));
@@ -18,7 +23,7 @@ export class UuidGenerator extends React.Component {
     event.stopPropagation();
   };
 
-  render() {
+  render(): JSX.Element {
     return (
       <div>
         <button onClick={this.onClick}>
