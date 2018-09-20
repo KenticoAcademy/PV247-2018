@@ -1,0 +1,29 @@
+@import 'layout.less';
+
+@mainColor: black;
+
+.generator {
+  .center();
+  color: @mainColor;
+
+  .generator__button {
+    .center();
+
+    &:hover {
+      background-color: @mainColor;
+      color: white;
+    }
+  }
+
+  .generator__list {
+    text-align: center;
+    list-style: none;
+  }
+
+  .generator__item {
+    background-color: lightgray;
+    &--new {
+      font-weight: bold;
+    }
+  }
+}
