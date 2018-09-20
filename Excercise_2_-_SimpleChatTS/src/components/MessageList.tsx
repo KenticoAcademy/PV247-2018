@@ -1,9 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import * as PropTypes from 'prop-types';
+import {IMessage} from "../types/IMessage";
 
-// @TODO-2: Rewrite to TS
+interface IMessageListProps {
+  readonly messages: IMessage[];
+}
 
-export class MessageList extends React.Component {
+export class MessageList extends React.Component<IMessageListProps> {
   static propTypes = {
     messages: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -12,7 +15,7 @@ export class MessageList extends React.Component {
     })),
   };
 
-  render() {
+  render(): JSX.Element {
     return (
       <div className="message-list">
         {this.props.messages && this.props.messages.map(message => (

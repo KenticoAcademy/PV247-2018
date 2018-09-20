@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5042ed18-e300-48e8-8b0f-7f92d4c84a88" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/Chat.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageList.tsx" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="PV247-2018" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UuidGenerator.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boilerplate/src/UuidGenerator.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Chat.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/Chat.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#798#889#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageForm.tsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageForm.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageList.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageList.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generator.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boilerplate/src/generator.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getUuid.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boilerplate/src/utils/getUuid.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boilerplate/src/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ex2_solved" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/boilerplate/src/utils/guid.ts" />
+        <option value="$PROJECT_DIR$/boilerplate/src/utils/uuid.ts" />
+        <option value="$PROJECT_DIR$/boilerplate/src/utils/Ruid.ts" />
+        <option value="$PROJECT_DIR$/boilerplate/src/styles.less" />
+        <option value="$PROJECT_DIR$/boilerplate/src/index.less" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageForm.jsx" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/Chat.jsx" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageList.jsx" />
+        <option value="$PROJECT_DIR$/boilerplate/src/utils/Guid.ts" />
+        <option value="$PROJECT_DIR$/boilerplate/src/utils/uuid.js" />
+        <option value="$PROJECT_DIR$/boilerplate/src/UuidGenerator.jsx" />
+        <option value="$PROJECT_DIR$/boilerplate/src/utils/getUuid.js" />
+        <option value="$PROJECT_DIR$/boilerplate/src/utils/Uuid.ts" />
+        <option value="$PROJECT_DIR$/boilerplate/src/utils/getUuid.ts" />
+        <option value="$PROJECT_DIR$/boilerplate/src/index.jsx" />
+        <option value="$PROJECT_DIR$/boilerplate/src/layout.less" />
+        <option value="$PROJECT_DIR$/boilerplate/src/generator.less" />
+        <option value="$PROJECT_DIR$/boilerplate/src/UuidGenerator.tsx" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/index.jsx" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/config.ts" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/models/Message.ts" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/models/IMessage.ts" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/types/IMessage.ts" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/Chat.tsx" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageList.tsx" />
+        <option value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageForm.tsx" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/node_modules" />
+    <handled-path value="$PROJECT_DIR$/boilerplate/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/package.json" />
+      <path value="$PROJECT_DIR$/boilerplate/package.json" />
+      <path value="$PROJECT_DIR$/demo1/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="481" />
+    <option name="y" value="225" />
+    <option name="width" value="1932" />
+    <option name="height" value="1045" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PV247-2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PV247-2018" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PV247-2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PV247-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="Excercise_2_-_SimpleChatTS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PV247-2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PV247-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="Excercise_2_-_SimpleChatTS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PV247-2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PV247-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="Excercise_2_-_SimpleChatTS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PV247-2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PV247-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="Excercise_2_-_SimpleChatTS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="types" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="present&#9;ACTION&#9;TogglePresentationMode&#10;presentation mode&#9;ACTION&#9;TogglePresentationMode&#10;presen&#9;ACTION&#9;TogglePresentationMode" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/boilerplate/node_modules/typescript/lib" />
+    <property name="typescript-compiler-editor-notification" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5042ed18-e300-48e8-8b0f-7f92d4c84a88" name="Default" comment="" />
+      <created>1537180603344</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537180603344</updated>
+      <workItem from="1537180604647" duration="17000" />
+      <workItem from="1537344283469" duration="9502000" />
+      <workItem from="1537361976263" duration="3607000" />
+      <workItem from="1537425932863" duration="2533000" />
+      <workItem from="1537428655603" duration="1835000" />
+      <workItem from="1537430747938" duration="5257000" />
+    </task>
+    <task id="LOCAL-00001" summary="Rewrite to typescript">
+      <created>1537354451346</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1537354451346</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add LESS styles">
+      <created>1537357682376</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1537357682376</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="22751000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32960895" />
+      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" x="2132" y="154" width="1358" height="724" id="Version Control" order="12" type="WINDOWED" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Quokka" order="9" weight="0.32960895" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="TypeScript" order="0" weight="0.32960895" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49907407" visible="true" weight="0.19125395" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5009259" side_tool="true" weight="0.24947916" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Quokka" order="9" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49907407" visible="true" weight="0.24895833" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="TypeScript" order="0" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" x="2132" y="154" width="1358" height="724" id="Version Control" order="12" type="WINDOWED" weight="0.32960895" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info id="Favorites" order="2" sideWeight="0.5009259" side_tool="true" weight="0.24947916" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Rewrite to typescript" />
+    <MESSAGE value="Add LESS styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add LESS styles" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/utils/getUuid.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/UuidGenerator.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageForm.tsx" />
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/Chat.tsx" />
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageList.tsx" />
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/UuidGenerator.tsx" />
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/layout.less" />
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/generator.less" />
+    <entry file="file://$PROJECT_DIR$/demo1/tutorial-help/suggested-form-markup.html" />
+    <entry file="file://$PROJECT_DIR$/demo1/src/components/Chat.jsx" />
+    <entry file="file://$PROJECT_DIR$/demo1/src/components/MessageList.jsx" />
+    <entry file="file://$PROJECT_DIR$/boilerplate/.babelrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kentico-onboarding-js/node_modules/@types/react/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="636" column="5" lean-forward="true" selection-start-line="636" selection-start-column="5" selection-end-line="636" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/node_modules/@types/react/global.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kentico-onboarding-js/src/components/App.tsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kentico-onboarding-js/src/components/EditedItem.tsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kentico-onboarding-js/src/components/List.tsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kentico-onboarding-js/src/components/PlainItem.tsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kentico-onboarding-js/src/components/NewItem.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret column="31" lean-forward="true" selection-start-column="31" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/public/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo1/src/index.jsx" />
+    <entry file="file://$PROJECT_DIR$/demo1/src/index.css" />
+    <entry file="file://$PROJECT_DIR$/boilerplate/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="55" column="14" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/tutorial-help/suggested-form-markup.html" />
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageList.tsx" />
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageForm.tsx" />
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageList.tsx" />
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/utils/getUuid.ts" />
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/utils/getUuid.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/UuidGenerator.tsx" />
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/utils/Guid.ts" />
+    <entry file="file://$PROJECT_DIR$/boilerplate/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/utils/Uuid.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/layout.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="70" selection-start-column="38" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/models/IMessage.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageForm.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageList.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/UuidGenerator.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/generator.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/utils/getUuid.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate/src/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/types/IMessage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/Chat.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#798#889#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageList.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excercise_2_-_SimpleChatTS/src/components/MessageForm.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

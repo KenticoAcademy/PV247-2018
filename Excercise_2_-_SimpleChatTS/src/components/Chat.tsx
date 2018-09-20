@@ -1,14 +1,9 @@
 import * as React from 'react';
 import * as uuid from 'uuid/v4';
-import { MessageList } from './MessageList.jsx';
-import { MessageForm } from './MessageForm.jsx';
+import { MessageList } from './MessageList';
+import { MessageForm } from './MessageForm';
 import { chatServerUrl } from '../config';
-
-interface IMessage {
-  readonly id: string;
-  readonly from: string;
-  readonly text: string;
-}
+import {IMessage} from '../types/IMessage';
 
 interface IServerMessage {
   readonly id: string;

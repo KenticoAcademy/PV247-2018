@@ -1,9 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import * as PropTypes from 'prop-types';
 
-// @TODO-1: Rewrite to TS
+interface IMessageFormDataProps {
+  readonly nick: string;
+  readonly message: string;
+}
 
-export class MessageForm extends React.Component {
+interface IMessageFormCallbackProps {
+  readonly onSend: () => void;
+  readonly onNickChange: (nick: string) => void;
+  readonly onMessageChange: (message: string) => void;
+}
+
+export class MessageForm extends React.Component<IMessageFormDataProps & IMessageFormCallbackProps> {
   static propTypes = {
     onSend: PropTypes.func.isRequired,
     nick: PropTypes.string.isRequired,
@@ -12,20 +21,20 @@ export class MessageForm extends React.Component {
     onMessageChange: PropTypes.func.isRequired,
   };
 
-  onSubmit = (event) => {
+  onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     this.props.onSend();
   };
 
-  onNickChange = (event) => {
+  onNickChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     this.props.onNickChange(event.target.value);
   };
 
-  onMessageChange = (event) => {
+  onMessageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     this.props.onMessageChange(event.target.value);
   };
 
-  render() {
+  render(): JSX.Element {
     return (
       <form
         className="message-form"
