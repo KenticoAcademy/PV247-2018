@@ -12,4 +12,5 @@ export interface ITodoApp {
   editedItemId: Uuid | null;
   visibilityFilter: TodoFilter;
   isLoading: boolean;
+  isSaving: boolean;
 }

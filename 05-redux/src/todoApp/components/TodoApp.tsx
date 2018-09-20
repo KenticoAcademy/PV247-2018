@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ScaleLoader } from 'react-spinners';
+import { ScaleLoader, SyncLoader } from 'react-spinners';
 import { NewTodoContainer } from '../containers/NewTodo';
 import { TodoListContainer } from '../containers/TodoList';
 import '../todoApp.less';
@@ -7,6 +7,7 @@ import { VisibilityFilters } from './VisibilityFilters';
 
 export interface ITodoAppStateProps {
   readonly isLoading: boolean;
+  readonly isSaving: boolean;
 }
 
 export interface ITodoAppDispatchProps {
@@ -35,8 +36,13 @@ export class TodoApp extends React.PureComponent<ITodoAppDispatchProps & ITodoAp
     return (
       <div className="container">
         <div className="row">
-          <div className="col-sm-8">
+          <div className="col-sm-7">
             <h1>Todo app</h1>
+          </div>
+          <div className="col-sm-1">
+            <div className="filters">
+              {this.props.isSaving && <SyncLoader size={10}/>}
+            </div>
           </div>
           <div className="col-sm-4">
             <VisibilityFilters/>

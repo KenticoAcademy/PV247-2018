@@ -8,6 +8,7 @@ import { ITodoAppDispatchProps, ITodoAppStateProps, TodoApp } from '../component
 const mapStateToProps = (state: IState) => {
   return {
     isLoading: state.todoApp.isLoading,
+    isSaving: state.todoApp.isSaving,
   };
 };
 

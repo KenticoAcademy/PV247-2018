@@ -1,6 +1,7 @@
 import { ITodoApp } from '../models/ITodoApp';
 import { editedItemId } from './editedItemId';
 import { isLoading } from './isLoading';
+import { isSaving } from './isSaving';
 import { items } from './items';
 import { visibilityFilter } from './visibilityFilter';
 
@@ -9,4 +10,5 @@ export const todoApp = (prevState = {} as ITodoApp, action: Action): ITodoApp =>
   editedItemId: editedItemId(prevState.editedItemId, action),
   visibilityFilter: visibilityFilter(prevState.visibilityFilter, action),
   isLoading: isLoading(prevState.isLoading, action),
+  isSaving: isSaving(prevState.isSaving, action),
 });
