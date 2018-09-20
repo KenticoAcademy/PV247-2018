@@ -11,6 +11,7 @@ export interface ITodoAppStateProps {
 
 export interface ITodoAppDispatchProps {
   readonly loadItems: () => void;
+  readonly deleteCompletedItems: () => void;
 }
 
 export class TodoApp extends React.PureComponent<ITodoAppDispatchProps & ITodoAppStateProps> {
@@ -39,6 +40,12 @@ export class TodoApp extends React.PureComponent<ITodoAppDispatchProps & ITodoAp
           </div>
           <div className="col-sm-4">
             <VisibilityFilters/>
+            <button
+              className="btn btn-danger"
+              onClick={this.props.deleteCompletedItems}
+            >
+              Delete completed
+            </button>
           </div>
           <div className="col-sm-12 col-md-6">
             <TodoListContainer/>
