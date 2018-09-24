@@ -12,7 +12,7 @@ export class TodoList extends React.PureComponent<ITodoListStateProps> {
       <div className="todo-list">
         {this.props.todoIds.map((id: Uuid, index: number) => (
           <TodoItemContainer
-            key={index}
+            key={id}
             id={id}
             index={index + 1}
           />
