@@ -8,6 +8,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import { UuidGenerator } from './UuidGenerator';
+import { UuidGenerator } from './UuidGenerator.tsx';
 
 ReactDOM.render(<UuidGenerator/>, document.getElementById('app-root'));
