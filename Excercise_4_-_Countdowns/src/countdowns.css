@@ -1,0 +1,23 @@
+.countdowns {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 250px;
+}
+
+.countdowns__header {
+    align-self: center;
+}
+
+.countdowns__grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.countdowns__add-new {
+    margin-bottom: 8px;
+}
+
+.countdowns__input {
+    margin-right: 8px;
+}
