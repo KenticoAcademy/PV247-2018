@@ -17,7 +17,7 @@ export class Countdowns extends React.PureComponent {
 
   onChangeInput = (e) => {
     this.setState({
-      input: e.target.duration,
+      input: e.target.value,
     });
   };
 
