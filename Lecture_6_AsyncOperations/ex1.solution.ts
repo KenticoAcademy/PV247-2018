@@ -11,7 +11,4 @@ import {
 
 createPromise('run', (resolve) => {
   // Execute tasks here
-  resolve(executeTask('task1', 20)
-    .then(() => executeTask('task2', 30, 'FAIL'))
-    .catch(() => ('')));
 });
