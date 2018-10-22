@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"sourceMap": true,
+		"strictNullChecks": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedParameters": false,
+		"noUnusedLocals": false,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"allowJs": false,
+		"forceConsistentCasingInFileNames": true,
+		"jsx": "react",
+		"types": [
+			"node"
+		],
+		"lib": [
+			"dom",
+			"scripthost",
+			"es7"
+		]
+	}
+}

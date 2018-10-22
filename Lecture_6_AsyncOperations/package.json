@@ -1,0 +1,16 @@
+{
+	"name": "coding-dojo",
+	"version": "0.0.1",
+	"description": "This is supporting code for a coding dojo on the subject of promises and the parallel with async/await.",
+	"repository": "git@github.com:vilemj-Viclick/coding-dojo-promises-vs-async.git",
+	"license": "MIT",
+	"dependencies": {
+		"@types/node": "^8.0.51",
+		"@types/object-assign": "^4.0.30",
+		"@types/rsvp": "^4.0.0",
+		"object-assign": "^4.1.1",
+		"rsvp": "^4.7.0",
+		"ts-node": "latest",
+		"typescript": "^2.6.1"
+	}
+}
