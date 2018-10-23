@@ -8,6 +8,7 @@
 		"@types/node": "^8.0.51",
 		"@types/object-assign": "^4.0.30",
 		"@types/rsvp": "^4.0.0",
+		"node-fetch": "^2.2.0",
 		"object-assign": "^4.1.1",
 		"rsvp": "^4.7.0",
 		"ts-node": "latest",
