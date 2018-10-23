@@ -6,7 +6,7 @@ import * as fetch from 'node-fetch';
  */
 
 async function run() {
-  
+
   console.log(name);
 }
 
