@@ -44,6 +44,7 @@
     "jest": "^23.6.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
+    "morgan-body": "^2.4.5",
     "react-set-state-usage": "^2.0.1",
     "style-loader": "^0.22.1",
     "ts-jest": "^23.10.4",

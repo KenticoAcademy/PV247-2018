@@ -2,6 +2,8 @@
 /* eslint-disable object-property-newline */
 /* eslint-disable no-path-concat */
 const path = require('path');
+const bodyParser = require('body-parser');
+const morganBody = require('morgan-body');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const mode = process.env.NODE_ENV || 'development';
 
@@ -26,7 +28,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'ts-loader',
-          { loader: 'tslint-loader', options: { configFile: 'tslint.json' } }
+          {loader: 'tslint-loader', options: {configFile: 'tslint.json'}}
         ]
       },
       {
@@ -35,40 +37,42 @@ module.exports = {
           path.resolve(__dirname, './node_modules')
         ],
         use: [
-          { loader: 'file-loader', options: { name: 'styles/[name].[ext]' } },
-          { loader: 'extract-loader', options: { publicPath: '../' } },
-          { loader: 'css-loader' }
+          {loader: 'file-loader', options: {name: 'styles/[name].[ext]'}},
+          {loader: 'extract-loader', options: {publicPath: '../'}},
+          {loader: 'css-loader'}
         ],
       },
-      { test: /\.css$/,
+      {
+        test: /\.css$/,
         exclude: [
           path.resolve(__dirname, './node_modules')
         ],
         use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" }
+          {loader: "style-loader"},
+          {loader: "css-loader"}
         ]
       },
-      { test: /\.less$/,
+      {
+        test: /\.less$/,
         exclude: [
           path.resolve(__dirname, './node_modules')
         ],
         use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" },
-          { loader: "less-loader" }
+          {loader: "style-loader"},
+          {loader: "css-loader"},
+          {loader: "less-loader"}
         ]
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)/,
         use: [
-          { loader: 'url-loader', options: { name: 'assets/[name].[ext]', limit: 10000 } }
+          {loader: 'url-loader', options: {name: 'assets/[name].[ext]', limit: 10000}}
         ]
       },
       {
         test: /\.(html|jpg|jpeg|png|ico|gif)/,
         use: [
-          { loader: 'file-loader', options: { name: '[path][name].[ext]', context: 'public' } }
+          {loader: 'file-loader', options: {name: '[path][name].[ext]', context: 'public'}}
         ]
       }
     ]
@@ -84,5 +88,18 @@ module.exports = {
     contentBase: path.resolve(__dirname, './build'),
     port: 3000,
     open: true,
+    quiet: false,
+    noInfo: false,
+    before(app) {
+      // mock server response
+      app.post('*', (_req, res, next) => {
+        res.send({email: 'abc@mno.xyz'});
+        next();
+      });
+
+      // log request and responses
+      app.use(bodyParser.text({ type: '*/*' }));
+      morganBody(app, {theme: 'lightened', skip: req => req.url.endsWith('.ico'), logReqUserAgent: false});
+    }
   }
 };
