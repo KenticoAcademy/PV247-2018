@@ -1,0 +1,1 @@
+https://github.com/KenticoAcademy/PV247-2018/tree/redux-solution-2
