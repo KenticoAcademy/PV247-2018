@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {ManualFragmentRouter} from './manualRouting/ManualFragmentRouter';
+import {ManualPathRouter} from './manualRouting/ManualPathRouter';
 
 export const Content: React.StatelessComponent = () => (
   <div className="container">
     <div className="jumbotron">
-      <ManualFragmentRouter />
+      <ManualPathRouter />
     </div>
   </div>
 );
