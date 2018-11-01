@@ -90,7 +90,6 @@ module.exports = {
     open: true,
     quiet: false,
     noInfo: false,
-    historyApiFallback: true,
     before(app) {
       // mock server response
       app.post('*', (_req, res, next) => {
