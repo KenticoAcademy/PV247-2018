@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Link} from 'react-router-dom';
 
 export class Menu extends React.PureComponent {
   static displayName = 'Menu';
@@ -13,14 +14,14 @@ export class Menu extends React.PureComponent {
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav">
               <li className={false ? 'active' : undefined}>
-                <a href="/">
+                <Link to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className={false ? 'active' : undefined}>
-                <a href="/About">
+                <Link to="/About">
                   About
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
