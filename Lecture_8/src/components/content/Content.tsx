@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {InclusiveRoutes} from './reactRouting/InclusiveRoutes';
+import {ExclusiveRoutes} from './reactRouting/ExclusiveRoutes';
 
 export const Content: React.StatelessComponent = () => (
   <div className="container">
     <div className="jumbotron">
 
-      <InclusiveRoutes/>
+      <ExclusiveRoutes/>
 
     </div>
   </div>
