@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {BasicRoutes} from './reactRouting/BasicRoutes';
+import {InclusiveRoutes} from './reactRouting/InclusiveRoutes';
 
 export const Content: React.StatelessComponent = () => (
   <div className="container">
     <div className="jumbotron">
 
-      <BasicRoutes/>
+      <InclusiveRoutes/>
 
     </div>
   </div>
