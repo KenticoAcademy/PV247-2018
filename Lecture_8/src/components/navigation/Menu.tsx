@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from './NavLink';
 
-export class Menu extends React.PureComponent {
+export class Menu extends React.Component {
   static displayName = 'Menu';
 
   render() {
@@ -13,16 +13,12 @@ export class Menu extends React.PureComponent {
           </div>
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav">
-              <li className={false ? 'active' : undefined}>
-                <Link to="/">
-                  Home
-                </Link>
-              </li>
-              <li className={false ? 'active' : undefined}>
-                <Link to="/About">
-                  About
-                </Link>
-              </li>
+              <NavLink to="/">
+                Home
+              </NavLink>
+              <NavLink to="/About">
+                About
+              </NavLink>
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li>
