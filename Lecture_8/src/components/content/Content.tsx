@@ -1,11 +1,12 @@
 import * as React from 'react';
-import {ParametersRouting} from './reactRouting/ParametersRouting';
+import {Route} from 'react-router-dom';
+import {DeclarativeRoutes} from './reactRouting/DeclarativeRoutes';
 
 export const Content: React.StatelessComponent = () => (
   <div className="container">
     <div className="jumbotron">
 
-    <ParametersRouting/>
+      <Route component={DeclarativeRoutes}/>
 
     </div>
   </div>
