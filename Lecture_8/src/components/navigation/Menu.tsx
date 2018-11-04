@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {NavLink} from './NavLink';
 
-export class Menu extends React.Component {
+export class Menu extends React.PureComponent {
   static displayName = 'Menu';
 
   render() {

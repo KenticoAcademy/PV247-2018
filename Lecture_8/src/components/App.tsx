@@ -4,13 +4,17 @@ import {Menu} from './navigation/Menu';
 import {Content} from './content/Content';
 import {Loader} from './navigation/Loader';
 
-export const App: React.StatelessComponent = () => (
-  <BrowserRouter>
-    <Loader>
-      <Menu/>
-      <Content/>
-    </Loader>
-  </BrowserRouter>
-);
+export class App extends React.PureComponent {
+  static displayName = 'App';
 
-App.displayName = 'App';
+  render() {
+    return (
+      <BrowserRouter>
+        <Loader>
+          <Menu/>
+          <Content/>
+        </Loader>
+      </BrowserRouter>
+    );
+  }
+}

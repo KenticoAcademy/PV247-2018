@@ -1,14 +1,18 @@
 import * as React from 'react';
-import {BreadcrumbRoutes} from './reactRouting/BreadcrumbRoutes';
+import {BasicRoutes} from './reactRouting/BasicRoutes';
 
-export const Content: React.StatelessComponent = () => (
-  <div className="container">
-    <div className="jumbotron">
+export class Content extends React.PureComponent {
+  static displayName = 'Container';
 
-      <BreadcrumbRoutes />
+  render() {
+    return (
+      <div className="container">
+        <div className="jumbotron">
 
-    </div>
-  </div>
-);
+          <BasicRoutes/>
 
-Content.displayName = 'Container';
+        </div>
+      </div>
+    );
+  }
+}

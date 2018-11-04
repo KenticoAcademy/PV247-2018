@@ -5,7 +5,7 @@ interface LoaderState {
  readonly isLoaded: boolean;
 }
 
-export class Loader extends React.Component<{}, LoaderState> {
+export class Loader extends React.PureComponent<{}, LoaderState> {
   static displayName = 'Loader';
 
   state = {

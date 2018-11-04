@@ -12,19 +12,29 @@ const renderHome: RenderFunction = () => (
 interface AboutProps extends RouteComponentProps {
 }
 
-const About: React.StatelessComponent<AboutProps> = () => (
-  <p>
-    I have a bad feeling About this.
-  </p>
-);
+class About extends React.PureComponent<AboutProps> {
+  static displayName = 'About';
 
-export const BasicRoutes: React.StatelessComponent = () => (
-  <>
-    <h1>Routing</h1>
+  render() {
+    return (
+      <p>
+        I have a bad feeling About this.
+      </p>
+    );
+  }
+}
 
-    <Route path="/" exact render={renderHome}/>
-    <Route path="/About" component={About}/>
-  </>
-);
+export class BasicRoutes extends React.PureComponent {
+  static displayName = 'BasicRoutes';
 
-BasicRoutes.displayName = 'BasicRoutes';
+  render() {
+    return (
+      <>
+        <h1>Routing</h1>
+
+        <Route path="/" exact render={renderHome}/>
+        <Route path="/About" component={About}/>
+      </>
+    );
+  }
+}
