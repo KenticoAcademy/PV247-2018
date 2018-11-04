@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import {Menu} from './navigation/Menu';
 import {Content} from './content/Content';
 import {Loader} from './navigation/Loader';
@@ -10,10 +10,12 @@ export class App extends React.PureComponent {
   render() {
     return (
       <BrowserRouter>
-        <Loader>
-          <Menu/>
-          <Content/>
-        </Loader>
+        <Route render={() => (
+          <Loader>
+            <Route component={Menu}/>
+            <Route component={Content}/>
+          </Loader>)}
+        />
       </BrowserRouter>
     );
   }
