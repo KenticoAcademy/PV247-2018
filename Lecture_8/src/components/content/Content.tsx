@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {RecursiveRoutes} from './reactRouting/RecursiveRoutes';
+import {BreadcrumbRoutes} from './reactRouting/BreadcrumbRoutes';
 
 export const Content: React.StatelessComponent = () => (
   <div className="container">
     <div className="jumbotron">
 
-      <RecursiveRoutes />
+      <BreadcrumbRoutes />
 
     </div>
   </div>
