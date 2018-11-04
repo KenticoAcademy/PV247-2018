@@ -3,7 +3,7 @@ import {Route} from 'react-router';
 
 export const ContextualRouteInfo: React.StatelessComponent = () => (
   <Route
-    path="/:text"
+    path="/parameter/:text"
     render={({match}) => {
       const containsInfo = {
         'contains \'cont\'': match.params.text.indexOf('cont') > -1,

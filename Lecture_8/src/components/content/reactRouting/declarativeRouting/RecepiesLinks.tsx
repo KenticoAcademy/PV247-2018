@@ -4,23 +4,23 @@ import {Link} from 'react-router-dom';
 export const RecepiesLinks: React.StatelessComponent = () => (
   <ul>
     <li>
-      <Link to="/cakes/tasteful-one/strong">Tasteful cake</Link>
+      <Link to="/declarative/cakes/tasteful-one/strong">Tasteful cake</Link>
     </li>
     <li>
-      <Link to="/cakes/graceful-one/light">Graceful cake</Link>
+      <Link to="/declarative/cakes/graceful-one/light">Graceful cake</Link>
     </li>
     <li>
-      <Link to="/cakes/cheap-one">Cheap cake</Link>
+      <Link to="/declarative/cakes/cheap-one">Cheap cake</Link>
     </li>
     <br/>
     <li>
-      <Link to="/muffins/delicious-one">Delicious muffin</Link>
+      <Link to="/declarative/muffins/delicious-one">Delicious muffin</Link>
     </li>
     <li>
-      <Link to="/muffins/white-one/yellow-topping">White muffin</Link>
+      <Link to="/declarative/muffins/white-one/yellow-topping">White muffin</Link>
     </li>
     <li>
-      <Link to="/muffins/one-of-color">Muffin of color</Link>
+      <Link to="/declarative/muffins/one-of-color">Muffin of color</Link>
     </li>
   </ul>
 );

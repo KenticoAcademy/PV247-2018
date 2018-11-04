@@ -1,21 +1,21 @@
 import * as React from 'react';
-import {Route, Link} from 'react-router-dom';
+import {Route, Link, RouteComponentProps} from 'react-router-dom';
 import {CurrentPage} from './breadcrumbRouting/CurrentPage';
 
 const journeyPath = '/:journey([0-9]+)+';
 
-export const BreadcrumbRoutes: React.StatelessComponent = () => (
+export const BreadcrumbRoutes: React.StatelessComponent<RouteComponentProps> = ({ match }) => (
   <>
     <p>
       <Route
-        path={journeyPath}
-        children={({match}) => (
-          <Link to="/1">
-            Let the adventure begin{match && ' again'}!
+        path={match.url + journeyPath}
+        children={({match: childrenMatch}) => (
+          <Link to={`${match.url}/1`}>
+            Let the adventure begin{childrenMatch && ' again'}!
           </Link>
         )}/>
     </p>
-    <Route path={journeyPath} component={CurrentPage}/>
+    <Route path={match.url + journeyPath} component={CurrentPage}/>
   </>
 );
 

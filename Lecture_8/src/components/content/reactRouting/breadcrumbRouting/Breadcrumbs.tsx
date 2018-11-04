@@ -9,7 +9,7 @@ interface BreadcrumbsProps {
 const prepareBreadcrumbs = (pageNumbers: number[]) => pageNumbers
   .map((page, index) => ({
     page,
-    path: '/' + pageNumbers.slice(0, index + 1).join('/'),
+    path: '/Breadcrumb/' + pageNumbers.slice(0, index + 1).join('/'),
     isNotLast: index + 1 < pageNumbers.length,
   }));
 

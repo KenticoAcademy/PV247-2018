@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import {Redirect, Route, RouterProps, Switch} from 'react-router';
+import {Redirect, Route, RouteComponentProps, Switch} from 'react-router';
 import {FreaknessError} from './declarativeRouting/FreaknessError';
 import {CakesLover} from './declarativeRouting/CakesLover';
 import {MuffinsLover} from './declarativeRouting/MuffinsLover';
@@ -9,7 +9,7 @@ interface DeclarativeRoutesState {
   isCakeFreak: boolean;
 }
 
-export class DeclarativeRoutes extends React.Component<RouterProps, DeclarativeRoutesState> {
+export class DeclarativeRoutes extends React.Component<RouteComponentProps, DeclarativeRoutesState> {
   static displayName = 'DeclarativeRoutes';
 
   static propTypes = {
@@ -24,7 +24,7 @@ export class DeclarativeRoutes extends React.Component<RouterProps, DeclarativeR
 
   private toggleFreakness = () => {
     this.setState(({isCakeFreak}) => ({isCakeFreak: !isCakeFreak}));
-    this.props.history.push('/');
+    this.props.history.push(this.props.match.url);
   };
 
   private renderButton = () => {
@@ -52,7 +52,7 @@ export class DeclarativeRoutes extends React.Component<RouterProps, DeclarativeR
       <>
         <Switch>
           <Route
-            path="/error"
+            path={`${this.props.match.url}/error`}
             render={props => <FreaknessError favour={isCakeFreak ? 'cakes' : 'muffins'} {...props} />}
           />
           <Route>
@@ -66,25 +66,25 @@ export class DeclarativeRoutes extends React.Component<RouterProps, DeclarativeR
           ? (
             <Switch>
               <Route
-                path="/cakes/"
-                render={({location}) => <h2 className="text-center">{location.pathname}</h2>}
+                path={`${this.props.match.url}/cakes/`}
+                render={({location}) => <h2 className="text-center">{location.pathname.replace('/declarative/', './')}</h2>}
               />
               <Redirect
-                from="/muffins/:subroutes*"
-                to="/error/muffins/:subroutes"
+                from={`${this.props.match.url}/muffins/:subroutes*`}
+                to={`${this.props.match.url}/error/muffins/:subroutes`}
               />
             </Switch>
           )
           : (
             <Switch>
               <Route
-                path="/muffins/"
-                render={({location}) => <h2 className="text-center">{location.pathname}</h2>}
+                path={`${this.props.match.url}/muffins`}
+                render={({location}) => <h2 className="text-center">{location.pathname.replace('/declarative/', './')}</h2>}
               />
               <Redirect
-                from="/cakes/:subroutes*"
+                from={`${this.props.match.url}/cakes/:subroutes*`}
                 to={{
-                  pathname: '/error',
+                  pathname: `${this.props.match.url}/error/`,
                   state: {
                     referrer: this.props.history.location
                   }

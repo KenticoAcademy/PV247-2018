@@ -20,6 +20,24 @@ class Menu extends React.PureComponent<LocationComponentProps> {
               <NavLink to="/About">
                 About
               </NavLink>
+              <NavLink to="/Breadcrumb">
+                Breadcrum Routes
+              </NavLink>
+              <NavLink to="/Declarative">
+                Declarative Routes
+              </NavLink>
+              <NavLink to="/Exclusive">
+                Exclusive Routes
+              </NavLink>
+              <NavLink to="/Inclusive">
+                Inclusive Routes
+              </NavLink>
+              <NavLink to="/Parameter">
+                Parameter Routes
+              </NavLink>
+              <NavLink to="/Recursive">
+                Recursive Routes
+              </NavLink>
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li>

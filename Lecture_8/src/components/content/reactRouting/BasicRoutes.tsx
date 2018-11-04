@@ -2,6 +2,8 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import {Routing} from './basicRouting/Routing';
 import {IncrementButton} from './basicRouting/IncrementButton';
+import {ManualPathRouter} from '../manualRouting/ManualPathRouter';
+import {ManualFragmentRouter} from '../manualRouting/ManualFragmentRouter';
 
 export interface BasicRoutesStateProps {
   readonly counter: number;
@@ -34,6 +36,10 @@ export class BasicRoutes extends React.PureComponent<BasicRoutesProps> {
           value={this.props.counter}
           onClick={this.props.onButtonClick}
         />
+
+        <ManualPathRouter/>
+
+        <ManualFragmentRouter/>
       </>
     );
   }

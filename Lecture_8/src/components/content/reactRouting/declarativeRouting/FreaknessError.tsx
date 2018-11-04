@@ -52,7 +52,7 @@ export class FreaknessError extends React.PureComponent<FreaknessErrorProps> {
             You said you like {favour}!
           </p>
           <p>
-            (from: {originalPath})
+            (from: {originalPath.replace('/declarative/', './')})
           </p>
         </div>
         <div className="col-xs-12 col-md-6">

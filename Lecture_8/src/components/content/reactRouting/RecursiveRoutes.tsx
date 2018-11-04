@@ -60,16 +60,16 @@ class BookPage extends React.Component<RouteComponentProps<StoryPageRouteParams>
   }
 }
 
-export const RecursiveRoutes: React.StatelessComponent = () => (
+export const RecursiveRoutes: React.StatelessComponent<RouteComponentProps> = ({ match }) => (
   <>
     <p>
-      <Link to="/1">
+      <Link to={`${match.url}/1`}>
         Let the adventure begin!
       </Link>
     </p>
 
     <Route
-      path={pageNumberParameter}
+      path={match.url + pageNumberParameter}
       component={BookPage}
     />
   </>

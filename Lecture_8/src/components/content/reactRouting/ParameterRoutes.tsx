@@ -26,8 +26,8 @@ export const ParameterRoutes: React.StatelessComponent = () => (
     </p>
     <ContextualRouteInfo/>
 
-    <Route exact path="/article/:title" component={Article}/>
-    <Route path="/article/:title/section/:section/:highlight?" component={Article}/>
+    <Route exact path="/parameter/article/:title" component={Article}/>
+    <Route path="/parameter/article/:title/section/:section/:highlight?" component={Article}/>
   </>
 );
 

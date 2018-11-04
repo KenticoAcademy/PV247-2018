@@ -3,7 +3,7 @@ import {Link, Route} from 'react-router-dom';
 
 const Routing: React.StatelessComponent = () => (
   <>
-    <Route path="/in" render={() => <span>&nbsp;</span>}/>
+    <Route path="/inclusive/in" render={() => <span>&nbsp;</span>}/>
     <span>routing</span>
   </>
 );
@@ -13,20 +13,20 @@ Routing.displayName = 'Routing(inclusive)';
 export const InclusiveRoutes: React.StatelessComponent = () => (
   <div>
     <p>
-      <Link to="/in">In</Link>
-      <Link to="/in/clusive">clusive</Link>
+      <Link to="/inclusive/in">In</Link>
+      <Link to="/inclusive/in/clusive">clusive</Link>
       &nbsp;
-      <Link to="/in/clusive/rout">rout</Link>
-      <Link to="/in/clusive/routing/">ing</Link>
+      <Link to="/inclusive/in/clusive/rout">rout</Link>
+      <Link to="/inclusive/in/clusive/routing/">ing</Link>
     </p>
 
-    <Route children={({location}) => <h2>URL: {location.pathname}</h2>}/>
+    <Route children={({location}) => <h2>URL: {location.pathname.replace('/inclusive/', './')}</h2>}/>
 
     <p>
-      <Route path="/in" render={() => <span>In</span>}/>
-      <Route exact path="/in/clusive/rout" render={() => <span>con</span>}/>
-      <Route path="/in/clusive" render={() => <span>clusive</span>}/>
-      <Route path="/in/clusive/routing" component={Routing}/>
+      <Route path="/inclusive/in" render={() => <span>In</span>}/>
+      <Route exact path="/inclusive/in/clusive/rout" render={() => <span>con</span>}/>
+      <Route path="/inclusive/in/clusive" render={() => <span>clusive</span>}/>
+      <Route path="/inclusive/in/clusive/routing" component={Routing}/>
     </p>
   </div>
 );

@@ -9,7 +9,7 @@ interface RouteContainsProps {
 
 export const RouteContains: React.StatelessComponent<RouteContainsProps> = props => (
   <Route
-    path="/:text"
+    path="/parameter/:text"
     render={(routeProps) => (
       routeProps.match.params.text.indexOf(props.substring) > -1
         ? <props.component/>
