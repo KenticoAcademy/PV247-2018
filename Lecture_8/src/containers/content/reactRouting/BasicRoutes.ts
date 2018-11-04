@@ -1,17 +1,22 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
+import {RouteComponentProps, withRouter} from 'react-router';
 import {MapDispatchToProps, MapStateToProps} from '../../../@types/redux';
 import {increaseCounter} from '../../../actions/increaseCounter';
-import {BasicRoutes} from '../../../Components/content/reactRouting/BasicRoutes';
+import {BasicRoutes, BasicRoutesDispatchProps, BasicRoutesStateProps} from '../../../Components/content/reactRouting/BasicRoutes';
 
-const mapStateToProps: MapStateToProps<{ counter: number }> = ({counter}) => ({
+type BasicRoutesOwnProps = RouteComponentProps;
+
+const mapStateToProps: MapStateToProps<BasicRoutesStateProps> = ({counter}) => ({
   counter,
 });
 
-const mapDispatchToProps: MapDispatchToProps<{ onButtonClick: () => void }> = (dispatch) => ({
+const mapDispatchToProps: MapDispatchToProps<BasicRoutesDispatchProps> = (dispatch) => ({
   onButtonClick: () => dispatch(increaseCounter()),
 });
 
-const BasicRoutesConnected: React.ComponentType = connect(mapStateToProps, mapDispatchToProps)(BasicRoutes);
+const BasicRoutesConnected: React.ComponentType<BasicRoutesOwnProps> = connect(mapStateToProps, mapDispatchToProps)(BasicRoutes);
 
-export {BasicRoutesConnected as BasicRoutes};
+const BasicRoutesWithRouter: React.ComponentType = withRouter(BasicRoutesConnected);
+
+export {BasicRoutesWithRouter as BasicRoutes};

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import {Route, RouteComponentProps, withRouter} from 'react-router';
+import {Route, RouteComponentProps} from 'react-router';
 
 type RenderFunction<TRouteParams = never> = ((props: RouteComponentProps<TRouteParams>) => React.ReactNode);
 
@@ -25,12 +25,17 @@ class About extends React.PureComponent<AboutProps> {
   }
 }
 
-interface BasicRoutesProps extends RouteComponentProps {
+export interface BasicRoutesStateProps {
   readonly counter: number;
+}
+
+export interface BasicRoutesDispatchProps {
   readonly onButtonClick: () => void;
 }
 
-class BasicRoutes extends React.PureComponent<BasicRoutesProps> {
+type BasicRoutesProps = BasicRoutesStateProps & BasicRoutesDispatchProps;
+
+export class BasicRoutes extends React.PureComponent<BasicRoutesProps> {
   static displayName = 'BasicRoutes';
 
   static propTypes = {
@@ -56,7 +61,7 @@ class BasicRoutes extends React.PureComponent<BasicRoutesProps> {
             type="button"
             onClick={this.props.onButtonClick}
           >
-            <span className="glyphicon glyphicon-plus" />
+            <span className="glyphicon glyphicon-plus"/>
             &nbsp;
             <span className="badge">{this.props.counter}</span>
           </button>
@@ -65,7 +70,3 @@ class BasicRoutes extends React.PureComponent<BasicRoutesProps> {
     );
   }
 }
-
-const BasicRoutesWithRouter = withRouter(BasicRoutes);
-
-export {BasicRoutesWithRouter as BasicRoutes};
