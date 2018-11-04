@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {NavLink} from './NavLink';
-import {RouteComponentProps, withRouter} from 'react-router';
+import {LocationComponentProps, withLocation} from '../../utils/withLocation';
 
-class Menu extends React.PureComponent<RouteComponentProps> {
+class Menu extends React.PureComponent<LocationComponentProps> {
   static displayName = 'Menu';
 
   render() {
@@ -35,6 +35,6 @@ class Menu extends React.PureComponent<RouteComponentProps> {
   }
 }
 
-const MenuWithRouter = withRouter(Menu);
+const MenuWithLocation = withLocation(Menu);
 
-export {MenuWithRouter as Menu};
+export {MenuWithLocation as Menu};
