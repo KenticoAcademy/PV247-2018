@@ -1,29 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import {Route, RouteComponentProps} from 'react-router';
-
-type RenderFunction<TRouteParams = never> = ((props: RouteComponentProps<TRouteParams>) => React.ReactNode);
-
-const renderHome: RenderFunction = () => (
-  <p>
-    All roads lead to Home.
-  </p>
-);
-
-interface AboutProps extends RouteComponentProps {
-}
-
-class About extends React.PureComponent<AboutProps> {
-  static displayName = 'About';
-
-  render() {
-    return (
-      <p>
-        I have a bad feeling About this.
-      </p>
-    );
-  }
-}
+import {Routing} from './basicRouting/Routing';
+import {IncrementButton} from './basicRouting/IncrementButton';
 
 export interface BasicRoutesStateProps {
   readonly counter: number;
@@ -50,22 +28,12 @@ export class BasicRoutes extends React.PureComponent<BasicRoutesProps> {
   render() {
     return (
       <>
-        <h1>Routing</h1>
+        <Routing/>
 
-        <Route path="/" exact render={renderHome}/>
-        <Route path="/About" component={About}/>
-
-        <p>
-          <button
-            className="btn btn-success"
-            type="button"
-            onClick={this.props.onButtonClick}
-          >
-            <span className="glyphicon glyphicon-plus"/>
-            &nbsp;
-            <span className="badge">{this.props.counter}</span>
-          </button>
-        </p>
+        <IncrementButton
+          value={this.props.counter}
+          onClick={this.props.onButtonClick}
+        />
       </>
     );
   }
