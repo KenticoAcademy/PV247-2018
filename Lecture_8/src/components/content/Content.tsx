@@ -1,12 +1,11 @@
 import * as React from 'react';
-import {Route} from 'react-router-dom';
-import {DeclarativeRoutes} from './reactRouting/DeclarativeRoutes';
+import {RecursiveRoutes} from './reactRouting/RecursiveRoutes';
 
 export const Content: React.StatelessComponent = () => (
   <div className="container">
     <div className="jumbotron">
 
-      <Route component={DeclarativeRoutes}/>
+      <RecursiveRoutes />
 
     </div>
   </div>
