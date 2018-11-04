@@ -23,6 +23,15 @@ class BookPage extends React.Component<RouteComponentProps<StoryPageRouteParams>
     }).isRequired,
   };
 
+  anchor = React.createRef<HTMLAnchorElement>();
+
+  componentDidMount() {
+    const {current} = this.anchor;
+    if (current) {
+      current.scrollIntoView();
+    }
+  }
+
   render() {
     const {params, url} = this.props.match;
     const currentPageNumber = Number(params.pageNumber);
@@ -44,6 +53,8 @@ class BookPage extends React.Component<RouteComponentProps<StoryPageRouteParams>
         <hr/>
 
         <Route path={`${url}${pageNumberParameter}`} component={BookPage}/>
+
+        <a ref={this.anchor}/>
       </>
     );
   }
