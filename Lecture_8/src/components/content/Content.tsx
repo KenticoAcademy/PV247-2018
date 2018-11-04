@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {BasicRoutes} from './reactRouting/BasicRoutes';
 import {RouteComponentProps, withRouter} from 'react-router';
+import {BasicRoutes} from '../../containers/content/reactRouting/BasicRoutes';
 
 class Content extends React.PureComponent<RouteComponentProps> {
   static displayName = 'Container';
@@ -10,7 +10,7 @@ class Content extends React.PureComponent<RouteComponentProps> {
       <div className="container">
         <div className="jumbotron">
 
-          <BasicRoutes counter={5} onButtonClick={() => undefined}/>
+          <BasicRoutes/>
 
         </div>
       </div>
