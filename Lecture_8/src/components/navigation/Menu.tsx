@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {NavLink} from './NavLink';
+import {RouteComponentProps, withRouter} from 'react-router';
 
-export class Menu extends React.PureComponent {
+class Menu extends React.PureComponent<RouteComponentProps> {
   static displayName = 'Menu';
 
   render() {
@@ -33,3 +34,7 @@ export class Menu extends React.PureComponent {
     );
   }
 }
+
+const MenuWithRouter = withRouter(Menu);
+
+export {MenuWithRouter as Menu};

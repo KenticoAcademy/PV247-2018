@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {BasicRoutes} from './reactRouting/BasicRoutes';
+import {RouteComponentProps, withRouter} from 'react-router';
 
-export class Content extends React.PureComponent {
+class Content extends React.PureComponent<RouteComponentProps> {
   static displayName = 'Container';
 
   render() {
@@ -16,3 +17,7 @@ export class Content extends React.PureComponent {
     );
   }
 }
+
+const ContentWithRouter = withRouter(Content);
+
+export {ContentWithRouter as Content};

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Route, RouteComponentProps} from 'react-router';
+import {Route, RouteComponentProps, withRouter} from 'react-router';
 
 type RenderFunction<TRouteParams = never> = ((props: RouteComponentProps<TRouteParams>) => React.ReactNode);
 
@@ -24,7 +24,7 @@ class About extends React.PureComponent<AboutProps> {
   }
 }
 
-export class BasicRoutes extends React.PureComponent {
+class BasicRoutes extends React.PureComponent<RouteComponentProps> {
   static displayName = 'BasicRoutes';
 
   render() {
@@ -38,3 +38,7 @@ export class BasicRoutes extends React.PureComponent {
     );
   }
 }
+
+const BasicRoutesWithRouter = withRouter(BasicRoutes);
+
+export {BasicRoutesWithRouter as BasicRoutes};

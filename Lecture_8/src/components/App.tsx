@@ -12,8 +12,8 @@ export class App extends React.PureComponent {
       <BrowserRouter>
         <Route render={() => (
           <Loader>
-            <Route component={Menu}/>
-            <Route component={Content}/>
+            <Menu/>
+            <Content/>
           </Loader>)}
         />
       </BrowserRouter>
