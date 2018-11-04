@@ -10,7 +10,7 @@ class Content extends React.PureComponent<RouteComponentProps> {
       <div className="container">
         <div className="jumbotron">
 
-          <BasicRoutes/>
+          <BasicRoutes counter={5} onButtonClick={() => undefined}/>
 
         </div>
       </div>
