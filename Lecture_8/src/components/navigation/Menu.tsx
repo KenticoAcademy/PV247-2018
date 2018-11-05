@@ -17,6 +17,12 @@ export class Menu extends React.Component {
             </Link>
           </div>
           <div id="navbar" className="navbar-collapse collapse">
+            <p
+              className="nav navbar-nav navbar-left alert alert-warning text-center"
+              style={{width: '80%', marginBottom: 0}}
+            >
+              TODO: Enable "NotFound" component to serve as a destination for all unknown routes.
+            </p>
             <ul className="nav navbar-nav navbar-right">
               <li className="">
                 <Link to="/Profile">
