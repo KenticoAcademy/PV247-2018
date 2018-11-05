@@ -1,8 +1,9 @@
 import * as React from 'react';
-import {Route} from 'react-router';
+import {Route, Switch} from 'react-router';
 import {Home} from './Home';
 import {About} from './About';
 import {NavLink} from 'react-router-dom';
+import {NotFound} from './NotFound';
 
 export const Content: React.StatelessComponent = () => (
   <div className="container">
@@ -18,8 +19,11 @@ export const Content: React.StatelessComponent = () => (
         </div>
       </div>
 
-      <Route path="/" exact render={Home}/>
-      <Route path="/About" component={About}/>
+      <Switch>
+        <Route path="/" exact render={Home}/>
+        <Route path="/About" component={About}/>
+        <Route path="*" component={NotFound}/>
+      </Switch>
     </div>
   </div>
 );
