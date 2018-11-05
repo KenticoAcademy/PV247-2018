@@ -90,16 +90,16 @@ module.exports = {
     open: true,
     quiet: false,
     noInfo: false,
+    historyApiFallback: true,
     before(app) {
-      // mock server response
-      app.post('*', (_req, res, next) => {
-        res.send({email: 'abc@mno.xyz'});
-        next();
-      });
-
       // log request and responses
       app.use(bodyParser.text({ type: '*/*' }));
-      morganBody(app, {theme: 'lightened', skip: req => req.url.endsWith('.ico'), logReqUserAgent: false});
+      morganBody(app, {
+        theme: 'lightened',
+        skip: req => ['.ico', '.css', '.js', '.woff2'].some(ending => req.url.endsWith(ending)),
+        logReqUserAgent: false,
+        logResponseBody: false
+      });
     }
   }
 };
