@@ -8,15 +8,18 @@ class AuthenticationDialog extends React.PureComponent<RouteComponentProps> {
 
   private navigateBack = (redirectionOrigin: RedirectionOrigin) => {
     const {history} = this.props;
+    const state = history.location.state;
 
-    // TODO: case when redirection from secured path occurred and user is not authenticated
-    if (redirectionOrigin === RedirectionOrigin.authentication) {
-      // TODO: condition needs to be extended, history needs to get new location pushed
+    // case when redirection from secured path occurred and user is not authenticated
+    if (redirectionOrigin === RedirectionOrigin.authentication && state && state.from) {
+      history.push(state.from);
+      return;
     }
 
-    // TODO: case when redirection from secured path occurred but user closed dialog or anonymized themselves.
-    if (redirectionOrigin !== RedirectionOrigin.authentication) {
-      // TODO: condition needs to be extended, history needs to get new location pushed
+    // case when redirection from secured path occurred but user closed dialog or anonymized themselves.
+    if (redirectionOrigin !== RedirectionOrigin.authentication && state && state.requiresAuth) {
+      history.push('/');
+      return;
     }
 
     // case when /auth was accessed directly by user entering address (e.g. in a new tab)

@@ -19,10 +19,10 @@ export class Menu extends React.Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse">
             <p
-              className="nav navbar-nav navbar-left alert alert-warning text-center"
+              className="nav navbar-nav navbar-left alert alert-success text-center"
               style={{width: '80%', marginBottom: 0}}
             >
-              TODO: Allow access to "Profile" route only to authenticated users - redirect anonymous ones accessing Profile to the authentication page.
+              DONE: Allow access to "Profile" route only to authenticated users - redirect anonymous ones accessing Profile to the authentication page.
             </p>
             <ul className="nav navbar-nav navbar-right">
               <li className="">
