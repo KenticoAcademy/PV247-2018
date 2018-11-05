@@ -4,6 +4,7 @@ import {Home} from './Home';
 import {About} from './About';
 import {NavLink} from 'react-router-dom';
 import {NotFound} from './NotFound';
+import {Profile} from './Profile';
 
 export const Content: React.StatelessComponent = () => (
   <div className="container">
@@ -22,6 +23,7 @@ export const Content: React.StatelessComponent = () => (
       <Switch>
         <Route path="/" exact render={Home}/>
         <Route path="/About" component={About}/>
+        <Route path="/Profile" component={Profile}/>
         <Route path="*" component={NotFound}/>
       </Switch>
     </div>

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
+import {authenticationStore} from '../../utils/authenticationStore';
 
 export class Menu extends React.Component {
   static displayName = 'Menu';
@@ -18,18 +19,18 @@ export class Menu extends React.Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse">
             <p
-              className="nav navbar-nav navbar-left alert alert-success text-center"
+              className="nav navbar-nav navbar-left alert alert-warning text-center"
               style={{width: '80%', marginBottom: 0}}
             >
-              DONE: Enable "NotFound" component to serve as a destination for all unknown routes.
+              TODO: Allow access to "Profile" route only to authenticated users - redirect anonymous ones accessing Profile to the authentication page.
             </p>
             <ul className="nav navbar-nav navbar-right">
               <li className="">
-                <Link to="/Profile">
+                <Link to="/Auth">
                   <span
-                    className="glyphicon glyphicon-user"
+                    className={`glyphicon ${authenticationStore.isAuthenticated ? 'glyphicon glyphicon-eye-close' : 'glyphicon-eye-open'}`}
                     aria-hidden="true"
-                    title="Profile"
+                    title={authenticationStore.isAuthenticated ? 'Anonymize' : 'Authenticate'}
                   />
                 </Link>
               </li>
