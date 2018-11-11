@@ -1,4 +1,4 @@
-import { RichTextEditor } from "./RichTextEditor";
+import { RichTextEditorContainer as RichTextEditor } from "./RichTextEditorContainer";
 
 require.context('../public/', true);
 
