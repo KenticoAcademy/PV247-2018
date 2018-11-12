@@ -14,6 +14,9 @@ export const RichTextEditor = (props) => {
         <button onClick={props.onBoldButtonClicked}>
           Bold
         </button>
+        <button onClick={props.onInserImageButtonClicked}>
+          Insert image
+        </button>
         <div
           style={{
             margin: '4px 0',
@@ -25,7 +28,7 @@ export const RichTextEditor = (props) => {
         editorState={props.editorState}
         onChange={props.onChange}
         handleKeyCommand={props.handleKeyCommand}
-        // blockRendererFn={}
+        blockRendererFn={props.getBlockRenderer}
         // blockStyleFn={}
         // keyBindingFn={}
         // readOnly={}
