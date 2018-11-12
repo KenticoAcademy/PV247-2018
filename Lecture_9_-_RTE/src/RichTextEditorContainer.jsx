@@ -2,13 +2,16 @@ import React from "react";
 import { EditorState, RichUtils, AtomicBlockUtils } from "draft-js";
 import { RichTextEditor } from "./RichTextEditor";
 import { CustomBlock, entityTypes } from "./CustomBlock";
+import { TagDecorator } from "./TagDecorator";
 
 const imageUrl = 'http://dogecoin.com/imgs/dogecoin-300.png';
 
 
 export class RichTextEditorContainer extends React.PureComponent {
   state = {
-    editorState: EditorState.createEmpty()
+    editorState: EditorState.set(EditorState.createEmpty(), {
+      decorator: TagDecorator,
+    }),
   };
 
   _onChange = (editorState) => {
@@ -45,7 +48,7 @@ export class RichTextEditorContainer extends React.PureComponent {
     const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
     const newEditorState = EditorState.set(
       this.state.editorState,
-      { currentContent: contentStateWithEntity }
+      {currentContent: contentStateWithEntity}
     );
     this._onChange(AtomicBlockUtils.insertAtomicBlock(newEditorState, entityKey, ' '));
   };
