@@ -6,7 +6,11 @@ const TagSpan = (props) => {
   return (
     <span
       style={{
-        backgroundColor: 'red'
+        backgroundColor: 'rgba(204,204,204, .3)',
+        padding: '0px 2px',
+        border: '1px solid #ccc',
+        borderRadius: '4px',
+        cursor: 'pointer'
       }}>
       {props.children}
     </span>
