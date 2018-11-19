@@ -1,0 +1,11 @@
+<div class="mx-auto mt-5 col-md-8">
+  <input type="text" [(ngModel)]="inputValue" (ngModelChange)="filterCities()" />
+  <table>
+    <tr>
+      <th>City</th>
+      <th>Temperature</th>
+    </tr>
+    <tr app-city *ngFor="let city of filteredCities" [city]="city">
+    </tr>
+  </table>
+</div>
