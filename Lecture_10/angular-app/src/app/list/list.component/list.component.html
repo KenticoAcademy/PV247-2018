@@ -1,0 +1,12 @@
+<div class="mx-auto mt-5 col-md-8">
+  <ul class="list-group">
+    <app-add-item (onAddItem)="addNewItem($event)"></app-add-item>
+    <li *ngFor="let item of items; let i = index" [attr.data-index]="i"  class="list-group-item">
+      <div>
+        <app-active-item *ngIf="item.isActive" [index]="i" [item]="item" (onSaveItem)="editItem(item.id, $event)"
+                    (onDeleteItem)="deleteItem(item.id)" (onCancelEditing)="toggleItem(item.id)"></app-active-item>
+        <app-inactive-item *ngIf="!item.isActive" [index]="i" [item]="item" (click)="toggleItem(item.id)"></app-inactive-item>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,11 @@
+<div class="input-group col-md-8">
+  <span class="input-group-addon">
+       {{index + 1}}.
+   </span>
+  <input class="form-control" type="text" [(ngModel)]="inputValue"/>
+  <div class="input-group-append">
+      <button class="btn btn-primary" (click)="saveItem()"> Save </button>
+      <button class="btn btn-default" (click)="cancelEditing()"> Cancel </button>
+      <button class="btn btn-danger" (click)="deleteItem()"> Delete </button>
+  </div>
+</div>
