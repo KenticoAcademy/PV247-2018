@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <span>Do your task, please :)</span>
+    <addressBook/>
   </div>
 </template>
 
 <script>
+import addressBook from './components/phoneBook'
 
 export default {
   name: 'App',
   components: {
+    addressBook
   }
 }
 </script>
