@@ -1,0 +1,1 @@
+Go to: https://github.com/oreqizer/redux2context
